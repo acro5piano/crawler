@@ -1,0 +1,55 @@
+{
+	"selector" : "#description_long" ,
+	"common_replace" : [
+		{
+			"match" : "(<br>|<br \/>)",
+			"with" : "\n"
+		} , 
+		{
+			"match" : "(<.*?>|\t|\r|\r\n)",
+			"with" : ""
+		} ,
+		{
+			"match" : "閉じる",
+			"with" : ""
+		} 
+	] ,
+	"magazine" : [
+		{
+			"url" : "http://www.fujisan.co.jp/product/2412/", 
+			"title" : "法学教室",
+			"list_no" : "1",
+			"replace" : [
+				{
+					"match":"……[0-9]+",
+					"with":""
+				}
+			]
+		} ,
+		{
+			"url" : "http://www.fujisan.co.jp/product/1934/", 
+			"title" : "日経ビジネス",
+			"list_no" : "3"
+		},
+		{
+			"url" : "http://www.fujisan.co.jp/product/1369/", 
+			"title" : "julist",
+			"list_no" : "2"
+		}
+	]
+}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

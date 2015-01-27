@@ -1,0 +1,362 @@
+@charset "utf-8";
+/****************
+ *
+ *reserve/
+ * ---index.php
+ * ---admin.php
+ *
+ * ***************/
+
+/* ****************************
+ *
+ * general 
+ *
+ * ****************************/
+
+body {
+	font-size: 15px;
+	line-height: 25px;
+	font-family: 'メイリオ', Arial, Sans-Serif;
+	color: #666666;
+/*	text-align: center; */
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	background:#eee;
+}
+a img {
+	border: none;
+}
+a:link {
+	color: #075BEB;
+	text-decoration: none;
+	}
+a:visited {
+	color: #075BEB;
+	text-decoration: none;
+	}
+a:hover {
+	color: #FF6600;
+	text-decoration: underline;
+	}
+
+h1{
+	font-weight:normal;
+	margin:0px;
+	margin-left:20px;
+}
+
+
+/* ****************************
+ *
+ * layout 
+ *
+ * ****************************/
+#header {
+	padding:20px 0px;
+	/*border-bottom:solid 1px mediumseagreen ;*/
+	background:#fcc700;
+	color:#fff;
+	margin:0px;
+	width:100%;
+}
+
+
+#wrapper{
+	margin:20px auto;
+	width:1024px;
+	background:#fff;
+	padding:10px;
+	border:solid 1px #ddd;
+}
+
+#footer{
+	padding:20px 0px;
+	width:100%;
+	/*border-bottom:solid 1px mediumseagreen ;*/
+	font-weight:normal;
+	background:#fcc700;
+	color:#fff;
+	margin:0px;
+}
+
+#footer a:link {
+	color: #fff;
+}
+#footer a:visited {
+	color: #fff;
+}
+#footer a:hover {
+	color: #ddaacc;
+	text-decoration: none;
+}
+
+.footer_link {
+	margin-left:20px;
+}
+
+#info {
+	text-align:right;
+	border-bottom:solid 1px #eee;
+	padding:10px;
+	margin:10px;
+}
+
+/****************************************************
+ *
+ * serminer form
+ *
+ * **************************************************/
+/*
+
+table.seminer{
+	width:680px;
+	background:#FFF;
+}
+table.seminer thead th,
+table.seminer thead td {
+	padding:10px;
+	text-align:center;
+	background-color:#333;
+	color:#fff;
+}
+
+table.seminer tbody td {
+	border:1px solid #ccc;
+	text-align:center;
+	margin:0;
+}
+
+td.afford a{
+	color:blue;
+	padding:5px;
+	display:block;
+	color:blue;
+}
+
+td.afford a:hover {
+	color:#FFF;
+	text-decoration:none;
+	background-color:lightblue;
+}
+
+td.full{
+	color:red;
+	padding:5px;
+}
+*/
+
+/****************************
+ *
+
+ * calendar 
+ *
+ * **************************/
+
+table.calendar{
+	width:100%;
+	background:#FFF;
+}
+table.calendar tr th,
+table.calendar thead td {
+	padding:10px;
+	text-align:center;
+	background-color:#eee;
+	color:#666;
+	font-weight:normal;
+	border:1px solid #ccc;
+}
+
+table.calendar tbody td {
+	border:1px solid #ccc;
+	text-align:center;
+	color:#666;
+	margin:0;
+}
+table.calendar tbody td a{
+}
+table.calendar tbody td a:hover {
+}
+
+table.calendar th.sun,
+table.calendar td.sun {
+	color:#d00;
+}
+
+table.calendar th.sat,
+table.calendar td.sat {
+	color:#00d;
+}
+
+table.calendar td.today {
+	color:#000;
+	background-color:#eee;
+	font-weight:normal;
+}
+/*
+table.calendar input[type="text"]{
+	width:100%;
+}
+*/
+
+.calendar_caption {
+	margin:0 5px;
+	font-weight:bold;
+	font-size:18px;
+}
+
+
+/****************************
+ *
+
+ * 情報入力画面 reserve_form
+ *
+ * **************************/
+
+table.input_form{
+	width:100%;
+	background:#FFF;
+}
+table.input_form tr th {
+	max-width:200px;
+}
+table.input_form tr th,
+table.input_form tr td {
+	padding:20px;
+	text-align:left;
+	color:#666;
+	font-weight:normal;
+	border:1px solid #ccc;
+	
+}
+table.input_form tr th {
+	background-color:#eee;
+}
+
+.e_equipment,
+.e_equipment table tr td{
+	text-align:left;
+	padding:3px;
+}
+.kiyaku{
+	overflow:scroll;
+	width:97%;
+	height:300px;
+	border:solid #ccc 1px;
+	padding:5px;
+}
+
+/*********************  
+ *
+ * input
+ * 
+ * ***************************/
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+textarea {
+	margin: 0 10px;
+	padding: 6px 4px;
+	max-width: 90%;
+	width: 90%;
+	outline: none;
+	border: 1px solid #ddd;
+	/*
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	*/
+	background: #ffffe0;
+	color: #777;
+	vertical-align: bottom;
+	font-size: 13px;
+	font-family: 'メイリオ', Arial, Sans-Serif;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	border: 1px solid #ff69b4;
+	background: #fff;
+	-webkit-box-shadow: 0 0 3px rgba(255,105,180,1);
+ 	-moz-box-shadow: 0 0 3px rgba(255,105,180,1);
+
+	box-shadow:  0 0 3px rgba(255,105,180,1);
+ 	color: #444;
+}
+
+textarea{
+	height:400px;
+}
+
+.button_next {
+	margin:20px 0;
+	background: none repeat scroll 0 0 #00bbdd;
+	border: 0 none;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	font-family: "メイリオ",Arial,sans-serif;
+	padding: 8px;
+	width: 100%;
+}
+
+.button_next:focus,
+.button_next:hover {
+	background: none repeat scroll 0 0 #00ccee;
+}
+
+/****************************
+ *
+
+ * 確認画面 reserve_confirm
+ *
+ * **************************/
+
+table.confirm_form{
+	width:100%;
+	background:#FFF;
+}
+table.confirm_form tr th,
+table.confirm_form tr td {
+	padding:20px;
+	text-align:center;
+	color:#666;
+	font-weight:normal;
+	border:1px solid #ccc;
+	
+}
+table.confirm_form tr th {
+	background-color:#eee;
+}
+
+
+
+/***********************
+ *
+ * button
+ *
+ * ********************/
+
+#image-btn-next {
+    border: 0px;
+    width: 180px;
+    height: 60px;
+    background: url(../images/button_next.gif) left top no-repeat;
+}
+#image-btn-comp {
+    border: 0px;
+    width: 180px;
+    height: 60px;
+    background: url(../images/button_complete.gif) left top no-repeat;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"], button{
+  cursor: pointer;
+}
+
+
