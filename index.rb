@@ -6,7 +6,6 @@ cgi = CGI.new
 if cgi['config'] != "" then
 	file = File.open("./config.json", "w")
 	file.puts(cgi['config'].gsub(/\r/,""))
-	File.chmod(0666,file.path)
 	file.close
 end
 
@@ -28,12 +27,12 @@ print <<EOM
 			<input type="submit" value="GO!" class="button_next" onclick="window.open('extract.rb')" target="_blank" />
 			<p>&nbsp;</p>
 			<h2>設定</h2>
-			<form method="POST" action="">
+			<form method="POST" action="./index.rb">
 				<textarea name="config">
 EOM
 open("config.json").each {|line|print line}
 print <<EOM
-				</textarea>
+</textarea>
 				<input type="submit" value="設定変更" class="button_next" />
 			</form>
 		</div>
