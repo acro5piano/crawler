@@ -1,6 +1,8 @@
 # crawler
-extract information from websites. Its configuration file is JSON file.
+extract information from http://www.fujisan.co.jp/ 
 
-deploy this repositories on a web server, and you can use it soon.
+The configuration file is JSON file.
+
+Deploy this repositories on a web server, and you can use it soon.
 
 
